@@ -1,0 +1,8 @@
+.category-btn {
+  padding: 0;
+}
+
+.category-btn > a {
+  width: 100%;
+  padding: 6px 12px;
+}

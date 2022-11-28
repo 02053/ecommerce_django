@@ -1,0 +1,24 @@
+{% extends "../base.html" %}
+
+{% block content %}
+
+
+<main class="container-lg d-flex justify-content-center flex-wrap">
+
+    <div class="">
+        <img src="/media/{{ product.product_image.first.image }}" class="card-img-top" />
+        <div class="card-body">
+            <h5 class="fs-6">{{ product.name }}</h5>
+            <p>{{ product.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ product.marca }}</li>
+            <li class="list-group-item text-danger fs-5">$/.{{ product.price }}</li>
+        </ul>
+    </div>
+
+</main>
+
+
+
+{% endblock %}

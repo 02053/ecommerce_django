@@ -1,0 +1,27 @@
+{% extends "../base.html" %}
+
+{% block content %}
+
+
+<main class="container-lg d-flex justify-content-center flex-wrap">
+
+    {% for product in products %}
+
+    <a href="{% url 'products:detail' product.slug %}" class="card m-3 col-sm-2 card-product text-primary text-decoration-none">
+        <img src="/media/{{ product.product_image.first.image }}" class="card-img-top" />
+        <div class="card-body">
+            <h5 class="fs-6">{{ product.name }}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{ product.marca }}</li>
+            <li class="list-group-item text-danger fs-5">$/.{{ product.price }}</li>
+        </ul>
+    </a>
+
+    {% endfor %}
+
+</main>
+
+
+
+{% endblock %}
